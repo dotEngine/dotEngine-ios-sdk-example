@@ -9,6 +9,9 @@ target 'video-chat' do
 
   # Pods for video-chat
   #
-  pod 'DotEngine', dotEngineSDKVersion 
-
+  # pod 'DotEngine', dotEngineSDKVersion 
+  #
+  pod 'AFNetworking'
+  pod 'Toast'
+  pod 'libdotEngine', :git => 'https://github.com/dotEngine/dotEngine-ios-sdk.git'
 end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44D19107D65924E91B830E04 /* libPods-video-chat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD670A4B2F28DF5696A773F6 /* libPods-video-chat.a */; };
 		F0D136781F02BD1E00CE5E06 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D136771F02BD1E00CE5E06 /* main.m */; };
 		F0D1367B1F02BD1E00CE5E06 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D1367A1F02BD1E00CE5E06 /* AppDelegate.m */; };
 		F0D1367E1F02BD1E00CE5E06 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D1367D1F02BD1E00CE5E06 /* ViewController.m */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		615A0637A85D0E84A9E87E2A /* Pods-video-chat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-video-chat.release.xcconfig"; path = "Pods/Target Support Files/Pods-video-chat/Pods-video-chat.release.xcconfig"; sourceTree = "<group>"; };
+		9E3B0E948702550FC4D8581A /* Pods-video-chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-video-chat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-video-chat/Pods-video-chat.debug.xcconfig"; sourceTree = "<group>"; };
+		DD670A4B2F28DF5696A773F6 /* libPods-video-chat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-video-chat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0D136731F02BD1E00CE5E06 /* video-chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "video-chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0D136771F02BD1E00CE5E06 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F0D136791F02BD1E00CE5E06 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44D19107D65924E91B830E04 /* libPods-video-chat.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3CB0434AC279770721E9B47B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD670A4B2F28DF5696A773F6 /* libPods-video-chat.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E708C4DE03CD7411C7EC38C5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9E3B0E948702550FC4D8581A /* Pods-video-chat.debug.xcconfig */,
+				615A0637A85D0E84A9E87E2A /* Pods-video-chat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F0D1366A1F02BD1E00CE5E06 = {
 			isa = PBXGroup;
 			children = (
 				F0D136751F02BD1E00CE5E06 /* video-chat */,
 				F0D136741F02BD1E00CE5E06 /* Products */,
+				E708C4DE03CD7411C7EC38C5 /* Pods */,
+				3CB0434AC279770721E9B47B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F0D1368A1F02BD1E00CE5E06 /* Build configuration list for PBXNativeTarget "video-chat" */;
 			buildPhases = (
+				CC3EAC3022524C92BB2B0ED7 /* [CP] Check Pods Manifest.lock */,
 				F0D1366F1F02BD1E00CE5E06 /* Sources */,
 				F0D136701F02BD1E00CE5E06 /* Frameworks */,
 				F0D136711F02BD1E00CE5E06 /* Resources */,
+				8DC77CE230787B283A633166 /* [CP] Embed Pods Frameworks */,
+				D4F791F7F25C048F5168D56B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -145,6 +172,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8DC77CE230787B283A633166 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-video-chat/Pods-video-chat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC3EAC3022524C92BB2B0ED7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D4F791F7F25C048F5168D56B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-video-chat/Pods-video-chat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F0D1366F1F02BD1E00CE5E06 /* Sources */ = {
@@ -271,6 +346,7 @@
 		};
 		F0D1368B1F02BD1E00CE5E06 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E3B0E948702550FC4D8581A /* Pods-video-chat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CLKRLU8RPY;
@@ -283,6 +359,7 @@
 		};
 		F0D1368C1F02BD1E00CE5E06 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 615A0637A85D0E84A9E87E2A /* Pods-video-chat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CLKRLU8RPY;
