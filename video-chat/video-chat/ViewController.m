@@ -70,7 +70,10 @@ static  BOOL    USE_CUSTOM_CAPTURE_MODE = false;
     // this may block a while
     [_localStream setupLocalMedia];  // for video preview
     
-    [self.view addSubview:_localStream.view];
+    
+    self.localVideoView = _localStream.view;
+    
+    [self.view addSubview:self.localVideoView];
     
     _remoteVideoViews = [NSMutableDictionary dictionary];
     
@@ -81,8 +84,9 @@ static  BOOL    USE_CUSTOM_CAPTURE_MODE = false;
     self.room = @"dot";
     
     [UIApplication sharedApplication].idleTimerDisabled = YES;
-
     
+    
+    [self.view setNeedsLayout];
     
 }
 
